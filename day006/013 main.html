@@ -20,11 +20,10 @@
             height: 50%;
         }
         ul {
-            height: 50%;
             text-align: center;
             border-top: 1px solid red;
             border-bottom: 1px solid red;
-            padding: 50px 120px; 
+            padding: 30px 120px; 
         }
         ul li {
             display: inline; 
@@ -57,6 +56,23 @@
             clear: both;
             background-color: lightgray;
         }
+        #navtable {
+            width: 100%;
+            background-color: black;
+            color: white;
+        }
+        td {
+            padding-left: 5%;
+        }
+        #contenttable {
+            border-collapse: collapse;
+        }
+        table, tr, td {
+            border: 1px solid black;
+        }
+        td {
+            width: 50%;
+        }
     </style>
 </head>
 <body>
@@ -77,8 +93,39 @@
                 </ul>
             </div>
         </div>
-        <div id="nav"></div>
-        <div id="content"></div>
+        <div id="nav">
+            <h3>카테고리</h3>
+            <table id="navtable">
+                <tr><td>컴퓨터</td></tr>
+                <tr><td>의류</td></tr>
+                <tr><td>음악</td></tr>
+                <tr><td>영화</td></tr>
+                <tr><td>스포츠/레저</td></tr>
+                <tr><td>가구/인테리어</td></tr>
+                <tr><td>식품</td></tr>
+            </table>
+        </div>
+        <div id="content">
+            <table id="contenttable">
+                <tr>
+                    <td>
+                        <img src="">
+                        <div>
+                            심플하고 슬림한 본체에 코어i5 3470과 지포스 GT630을 장착 CPU:인텔 코어I5 3470 (아이비브릿지 3세대) 사용<br>
+                            가격:1,200,000원
+                        </div>
+                    </td>
+                    <td>
+                        <img src="">
+                        <div>
+                            Full-HD로 선명한 화면, ISP패널로 시야각도 좋다!<br>
+                            CPU:인텔 코어i7 3630 QM<br>
+                            가격:1,200,000원
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
         <div id="login"></div>
         <div id="footer"></div>
     </div>
