@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout 연습3</title> 
+    <style>
+        html, body, #wrapper {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            margin: 0;
+        }
+        #header {
+            width: 100%;
+            height: 30%;
+            background-color: lightblue;
+        }
+        #subject {
+            height: 50%;
+        }
+        ul {
+            height: 50%;
+            text-align: center;
+            border-top: 1px solid red;
+            border-bottom: 1px solid red;
+            padding: 50px 120px; 
+        }
+        ul li {
+            display: inline; 
+            text-transform: uppercase;
+            padding: 0 40px;
+            letter-spacing: 10px;
+        }
+        #nav {
+            width: 20%;
+            height: 60%;
+            float: left;
+            background-color: lightcoral;
+        }
+        #content {
+            
+            width: 50%;
+            height: 60%;
+            background-color: lightcyan;
+            display: inline-block;
+        }
+        #login {
+            width: 30%;
+            height: 60%;
+            float: right;
+            background-color: lightgoldenrodyellow;
+        }
+        #footer {
+            width: 100%;
+            height:10%;
+            clear: both;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="subject">
+                <span>
+                <a href="#"><img src="img/coffee.jpg" width="10%">Web Shop</a>
+                </span>
+            </div>
+            <div id="list">
+                <ul>
+                    <li>home</li>
+                    <li>about us</li>
+                    <li>new</li>
+                    <li>my account</li>
+                    <li>contacts</li>
+                </ul>
+            </div>
+        </div>
+        <div id="nav"></div>
+        <div id="content"></div>
+        <div id="login"></div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
