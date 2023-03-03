@@ -21,6 +21,7 @@
             height: 68%;
         }
         .hd2 {
+            background-color: darkcyan;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -38,6 +39,16 @@
             display: inline;
             letter-spacing: 10px;
             padding: 0 5%;
+            font-weight: bold;
+        }
+        .hd-ul li a {
+            text-decoration: none;
+        }
+        .hd-ul li a:link {
+            color: white;
+        }
+        .hd-ul li a:visited {
+            color: white;
         }
 
         .nav {
@@ -55,9 +66,9 @@
             float: left;
         }
         .navsubject {
-            width: 50%; height: 10%;
+            width: 50%; height: 5%;
             position: relative;
-            top: 5%;
+            /* top: %; */
             left: 3%;
         }
         .navtable {
@@ -73,6 +84,15 @@
         #navtable td {
             border: 1px solid grey;
             padding-left: 5%;
+        }
+        #navtable a:link {
+            text-decoration: none;
+        }
+        #navtable a:visited {
+            color: white;
+        }
+        #navtable a:hover {
+            color: yellow;
         }
         #contenttable {
             position: absolute;
@@ -120,10 +140,10 @@
             </div>
             <div class="hd2">
                 <ul class="hd-ul">
-                    <li>HOME</li>
-                    <li>ABOUT US</li>
-                    <li>MY ACCOUNT</li>
-                    <li>CONTACTS</li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">MY ACCOUNT</a></li>
+                    <li><a href="#">CONTACTS</a></li>
                 </ul>
             </div>
         </div>
@@ -133,13 +153,13 @@
             </div>
             <div class="navtable">
                 <table id="navtable">
-                    <tr><td>컴퓨터</td></tr>
-                    <tr><td>의류</td></tr>
-                    <tr><td>음악</td></tr>
-                    <tr><td>영화</td></tr>
-                    <tr><td>스포츠/레저</td></tr>
-                    <tr><td>가구/인테리어</td></tr>
-                    <tr><td>식품</td></tr>
+                    <tr><td><a href="#">컴퓨터</a></td></tr>
+                    <tr><td><a href="#">의류</a></td></tr>
+                    <tr><td><a href="#">음악</a></td></tr>
+                    <tr><td><a href="#">영화</a></td></tr>
+                    <tr><td><a href="#">스포츠/레저</a></td></tr>
+                    <tr><td><a href="#">가구/인테리어</a></td></tr>
+                    <tr><td><a href="#">식품</a></td></tr>
                 </table>
             </div>
         </div>
