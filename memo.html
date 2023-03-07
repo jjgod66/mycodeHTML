@@ -77,6 +77,52 @@
             align-items: center;
             color: white;
         }
+        #hd2 ul {
+            margin: 0;
+            padding: 0;
+        }
+        #hd2 ul li {
+            display: inline;
+            text-transform: uppercase;
+            font-size: 18px;
+            padding: 0 20px;
+        }
+        #con1 div.box {
+            display: flex;
+            flex-direction: column;
+        }
+        #con1-1 {
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #con1-2 {
+            height: 80%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        #con1-2 ul {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            margin: 0; padding: 0;
+            justify-content: flex-start;
+            gap: 10%;
+        }
+        #con1-2 ul li {
+            list-style: none;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            padding: 5% 0;
+        }
+        /* #con1-3 {
+            height: 20%;
+        } */
     </style>
 </head>
 <body>
@@ -90,18 +136,31 @@
             <div class="box">
                 <ul>
                     <li>Home</li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>SHOPPING ABOUT</li>
+                    <li>NEWS</li>
+                    <li>MY ACCOUNT</li>
+                    <li>CONTACTS</li>
                 </ul>
             </div>
         </div>
         <div class="content" id="con1">
-            <div class="box"></div>
+            <div class="box">
+                <div id="con1-1">Cartegory</div>
+                <div id="con1-2">
+                    <ul>
+                        <li>의류</li>
+                        <li>식품</li>
+                        <li>가구</li>
+                        <li>스포츠</li>
+                    </ul>
+                </div>
+                <!-- <div id="con1-3"></div> -->
+            </div>
         </div>
         <div class="content" id="con2">
-            <div class="box"></div>
+            <div class="box">
+
+            </div>
         </div>
         <div class="content" id="con3">
             <div class="box"></div>
