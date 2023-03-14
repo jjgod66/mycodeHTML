@@ -2,7 +2,7 @@
 // 배열의 변수명은 보통 복수로 쓴다...
 const arrr = [1, 3, "Smith", true]
 const cars = ["jeep", "volvo", "bmw"];
-console.log(cars); 
+console.log(cars);
 console.log(cars.length);
 console.log(cars[0]);
 
