@@ -17,7 +17,7 @@ console.log(cars);
 cars.pop();
 console.log(cars);
 
-//slice 잘라내기
+//slice 잘라서 담는다. 원본 훼손X
 const a = cars.slice(1);
 console.log(a);
 console.log(cars);
