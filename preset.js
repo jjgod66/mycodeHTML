@@ -25,3 +25,8 @@ for (let i = 0; i<nums.length; i++) {
     body.appendChild(divCreate);
 }
 
+
+
+
+
+
