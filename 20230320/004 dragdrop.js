@@ -19,11 +19,11 @@ for (let i=0; i<boxes.length; i++) {
     });
     boxes[i].addEventListener("dragleave", (e) => {
         boxes[i].classList.remove("hovered");
-        // boxes[i].removeChild(image);    
     });
     boxes[i].addEventListener("drop", (e) => {
         divCoppied = document.createElement("div");
         divCoppied.classList.add("image");
+        divCoppied.setAttribute("draggable", true)
         // boxes[i].appendChild(image);
         boxes[i].appendChild(divCoppied);
         boxes[i].classList.remove("hovered");
