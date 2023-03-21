@@ -21,10 +21,10 @@ for (let i=0; i<boxes.length; i++) {
         boxes[i].classList.remove("hovered");
     });
     boxes[i].addEventListener("drop", (e) => {
+        // boxes[i].appendChild(image);
         divCoppied = document.createElement("div");
         divCoppied.classList.add("image");
         divCoppied.setAttribute("draggable", true)
-        // boxes[i].appendChild(image);
         boxes[i].appendChild(divCoppied);
         boxes[i].classList.remove("hovered");
     });

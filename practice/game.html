@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title> </title> 
+        <style>
+            body {
+                margin: 0;
+                
+            }
+            .numbox {
+                display: inline-block;
+                width: 30px; height: 30px;
+                margin: 1px; padding: 15px 15px;
+                color: darkcyan;
+                background-color: darkcyan;
+                text-align: center;
+                justify-content: center;
+                
+            }
+            #container {
+                width: 300px; height: 300px;
+                display: none;
+                flex-wrap: wrap;
+                align-content: space-evenly;
+                justify-content: space-evenly;
+                border: 2px dotted darkred;
+                margin: 5px;
+            }
+            #info {
+                margin: 10px;
+            }
+            #btnRematch {
+                display: none;
+                font-size: 20px; 
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div id="container"></div>
+        </form>
+            <div id="info">
+                <select style="font-size: 20px; margin-left: 10px;">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <button id="btnGo" style="font-size: 20px;">GO</button>
+                <h1 style="margin: 0;"></h1>
+                <input type="reset" id="btnRematch" value="rematch?"/>
+            </div>
+            
+        <script src="game.js"></script>
+    </body>
+</html>
