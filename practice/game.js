@@ -8,6 +8,11 @@ for (let i = 0; i<12; i++) {
     nums[i] = i+1;
 }
 
+//커서이벤트 막기
+const preventCursor = function () {
+    container.style.pointerEvents = "none";
+};
+
 
 // 배열에 들어있는 숫자요소 섞기
 for (let i = 0; i<nums.length; i++) {
@@ -30,54 +35,40 @@ for (let i = 0; i<nums.length; i++) {
 const divs = document.querySelectorAll(".numbox");
 
 
-// 고른 숫자 확정
+// 유저가 고른 숫자 확정하는 go버튼
 const go = function () {
     container.style.display = "flex";
     h1.innerHTML = `"${select.value}" is selected`;
     btnGo.style.display = "none";
     select.style.display = "none";
-    btnRematch.style.display = "inline";
+    
 };
 btnGo.addEventListener("click", go)
 
 
-//클릭했을때 이벤트
+//숫자박스 클릭했을때 이벤트
 for (let i=0; i<nums.length; i++) {
-    const func = function () {
+    const clickNum = function () {
         if (nums[i] === parseInt(select.value)) {
-            for (let j=0; j<nums.length; j++) {
-                divs[j].style.color = "white";
-            }
-            h1.innerHTML = "GOOD!"
-            btnRematch.style.display = "inline";
-        } else if (nums[i] !== parseInt(select.value)) {
-            divs[i].style.color = "white";
+            h1.innerHTML = "GOOD!";
+        } else {
             h1.innerHTML = "FAIL!"
         }
+        for (let j=0; j<nums.length; j++) {
+            divs[j].style.color = "white";
+        }
+        divs[i].style.border = "2px solid darkred";
+        preventCursor();
+        btnRematch.style.display = "inline";
     };
-    divs[i].addEventListener("click",func);
+    divs[i].addEventListener("click",clickNum);
+    // divs[i].addEventListener("mouseover",clickNum);
+    
 }
 
-// 리매치?
+// 리매치버튼
 const rematch = function () {
     location.reload();
 };
 btnRematch.addEventListener("click", rematch);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

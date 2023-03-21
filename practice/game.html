@@ -4,19 +4,33 @@
         <meta charset="UTF-8">
         <title> </title> 
         <style>
+            * {
+                box-sizing: border-box;
+            }
             body {
                 margin: 0;
+                width: 100%; height: 100%;
                 
             }
+            #wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 500px;
+                padding-top: 100px;
+            }
             .numbox {
-                display: inline-block;
-                width: 30px; height: 30px;
+                display: flex;
+                justify-content: center; align-items: center;
+                width: 70px; height: 70px;
                 margin: 1px; padding: 15px 15px;
                 color: darkcyan;
+                font-size: 1.5em;
                 background-color: darkcyan;
-                text-align: center;
-                justify-content: center;
-                
+                cursor: pointer;
+            }
+            .numbox:hover {
+                border: 2px solid darkred;
             }
             #container {
                 width: 300px; height: 300px;
@@ -34,32 +48,36 @@
                 display: none;
                 font-size: 20px; 
             }
+            h1 {
+                text-align: center;
+            }
         </style>
     </head>
-    <body>
-        <form>
-            <div id="container"></div>
-        </form>
-            <div id="info">
-                <select style="font-size: 20px; margin-left: 10px;">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                </select>
-                <button id="btnGo" style="font-size: 20px;">GO</button>
-                <h1 style="margin: 0;"></h1>
-                <input type="reset" id="btnRematch" value="rematch?"/>
-            </div>
-            
+    <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+        <div id="wrapper">
+            <form>
+                <div id="container"></div>
+            </form>
+                <div id="info">
+                    <select style="font-size: 20px;">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <button id="btnGo" style="font-size: 20px;">GO</button>
+                    <h1 style="margin: 0;"></h1>
+                    <input type="reset" id="btnRematch" value="rematch"/>
+                </div>
+        </div>    
         <script src="game.js"></script>
     </body>
 </html>
