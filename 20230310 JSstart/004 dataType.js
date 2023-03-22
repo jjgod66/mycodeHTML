@@ -36,3 +36,4 @@ console.log(undef2, typeof undef2);
 let nulValue = null; // null은 아무것도 없다는 의미 (== void)
 let objectType = null;
 console.log(nulValue, typeof nulValue);
+

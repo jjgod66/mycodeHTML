@@ -5,7 +5,7 @@ const cars = ["jeep", "volvo", "bmw"];
 console.log(cars);
 console.log(cars.length);
 console.log(cars[0]);
-
+    
 //Array methods 배열의 메소드
 
 //push 배열의 제일 뒤에 아이템 추가

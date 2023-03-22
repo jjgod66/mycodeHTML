@@ -1,4 +1,4 @@
-// 1단계 : 이벤트의 대상을 선언aaa
+// 1단계 : 이벤트의 대상을 선언
 const inputTag = document.querySelector("html");
 // 2단계 : 콜백함수 선언
 const callback = function (e) {
