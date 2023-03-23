@@ -10,14 +10,14 @@
 
 
 const btn = document.querySelector("button");
-// const callback = function (e) {
+// const callback = function (e) {}
 // 애로우함수로 변경
 // const callback = (e) => { 
 //     const h1 = document.querySelector("h1");
 //     let counter = parseInt(h1.innerHTML, 10);
 //     counter += 1;
 //     h1.innerHTML = counter;
-// };
+// }
 
 //익명함수 (중요!!) . 함수선언시 함수 이름을 만들지 않는 것을 말한다.
 btn.addEventListener("click",(e) => { 

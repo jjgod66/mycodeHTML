@@ -43,7 +43,7 @@ for (let i=0; i<numberItems.length; i++) {
 }
 //h태그에 기본적으로 들어갈 말들
 yourNumberIs.innerHTML = "";
-yourLifeIs.innerHTML = "Your Life is  3/3";
+yourLifeIs.innerHTML = `Your Life is  ${counterLife}/3`;
 
 //start버튼 이벤트
 const start = function (e) {
@@ -57,35 +57,53 @@ const start = function (e) {
 btnStart.addEventListener("click",start)
 
 //restart버튼 이벤트
-const rematch = function () {
+const restart = function () {
     location.reload();
 };
-btnRestart.addEventListener("click", rematch);
+btnRestart.addEventListener("click", restart);
 
 //itemBox 클릭했을때 이벤트
 const itemBox = document.querySelectorAll(".itemBox");
 for (let i=0; i<numberItems.length; i++) {
     const clickitemBox = function (e) {
 
-        if (parseInt(itemBox[i].innerHTML)===selectValue) {
-            console.log("a");
-            itemBox[i].classList.add("goodBox");
-            yourNumberIs.innerHTML = "GOOD JOB!";
-            yourLifeIs.innerHTML = "";
+        const gameisOver = function (e) {
             for (let j=0; j<numberItems.length; j++) {
                 itemBox[j].classList.add("textcolorWhite");
+                itemBox[j].classList.add("cannotClick");
             }
-        } else {
-            counterLife--;
-            if (counterLife>0) {
-                itemBox[i].classList.add("wrongBox");
-                itemBox[i].classList.add("textcolorWhite");
-                yourLifeIs.innerHTML = `Wrong! Your Life is ${counterLife}/3`;
+        }
+
+        if (!itemBox[i].classList.contains("cannotClick")) {
+
+            if (parseInt(itemBox[i].innerHTML)===selectValue) {
+                itemBox[i].classList.add("goodBox");
+                yourNumberIs.innerHTML = "GOOD JOB!";
+                yourLifeIs.innerHTML = "";
+                gameisOver();
             } else {
-                yourLifeIs.style.color = "darkred";
-                yourLifeIs.innerHTML = `Failed.. Life is Over`;
+                counterLife--;
+                itemBox[i].classList.add("wrongBox");
+                if (counterLife>0) {
+                    itemBox[i].classList.add("textcolorWhite");
+                    itemBox[i].classList.add("cannotClick");
+                    yourLifeIs.innerHTML = `Wrong! Your Life is ${counterLife}/3`;
+                } else {
+                    counterLife = 0;
+                    gameisOver();
+                    yourLifeIs.style.color = "darkred";
+                    yourLifeIs.innerHTML = `Failed.. Life is Over`;
+                    console.log(counterLife);
+                }
             }
         }
     };
+
     itemBox[i].addEventListener("click",clickitemBox);
+    itemBox[i].addEventListener("mouseover", (e) => {
+        itemBox[i].style.border = "2px solid darkred";
+    })
+    itemBox[i].addEventListener("mouseleave",(e) => {
+        itemBox[i].style.border = "none";
+    })
 }

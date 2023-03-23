@@ -8,6 +8,13 @@
                 box-sizing: border-box;
                 margin: 0;
             }
+            html {
+                height: 100%;
+            }
+            body {
+                min-height: 100vh;
+                background-color: floralwhite;
+            }
             #wrapper {
                 display: flex;
                 flex-direction: column;
@@ -15,7 +22,6 @@
             }
             #container {
                 display: none;
-                /* display: flex; */
                 flex-wrap: wrap;
                 justify-content: space-around;
                 align-items: center;
@@ -41,7 +47,7 @@
                 text-align: center;
             }
             select {
-                margin: 5px 0;
+                margin: 100px 0 5px 0;
                 font-size: 1.5em;
             }
             #btnBox {
@@ -59,10 +65,12 @@
             .textcolorWhite {
                 color : white;
             }
-            
+            .darkred {
+                color : darkred;
+            }
         </style>
     </head>
-    <body>
+    <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
         <div id="wrapper">
             <div id="container">
 
