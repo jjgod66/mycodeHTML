@@ -1,15 +1,19 @@
 const hi = document.querySelector("#hi");
 const btn = document.querySelector("#btn")
-function changeColor () {
-    setInterval(function () {
-        let red = Math.floor(Math.random()*255);
-        let green = Math.floor(Math.random()*255);
-        let blue= Math.floor(Math.random()*255);
-        hi.style.backgroundColor = "#"+red.toString(16)+green.toString(16)+blue.toString(16)
-    }, 1000)
+const btn2 = document.querySelector("#btn2")
+function start() {
+    let changeColor = setInterval(function () {
+            let red = Math.floor(Math.random()*256);
+            let green = Math.floor(Math.random()*256);
+            let blue= Math.floor(Math.random()*256);
+            hi.style.backgroundColor = "#"+red.toString(16)+green.toString(16)+blue.toString(16)
+        }, 500)
 }
-btn.addEventListener("click", changeColor)
-// changeColor();
+// function stopInterval() {
+//     let stopColor = 
+// } 
+
+
 
 
 
