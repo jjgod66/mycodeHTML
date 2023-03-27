@@ -3,16 +3,29 @@
     <head>
         <meta charset="UTF-8">
         <title>memo</title>
+        <style>
+            
+        </style>
+        <script src="20230327/js/jquery-3.6.4.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".c").each(function(i,e,c){
+                    $(this).on("click", function() {
+                        console.log(c);
+                    })
+                })
+            })
+        </script>
     </head>
     <body>
+        <div id="div1" class="a b c">div1</div>
+        <div id="div2" class="b c d">div2</div>
+        <div id="div3" class="c d a">div3</div>
+        <div id="div4">div4</div>
+        <input type="text"/>
 
 
 
 
-
-
-        <script>
-            console.log(undefined||3);
-        </script>
     </body>
 </html>

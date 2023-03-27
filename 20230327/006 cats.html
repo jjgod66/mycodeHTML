@@ -11,10 +11,13 @@
         <script src="js/jquery-3.6.4.js"></script>
         <script>
             $(document).ready(function() {
-                $("input[type='button']").css("backgroundColor", "yellow");
+                $("input[type=button]").css("backgroundColor", "yellow");
                 $("a[href^='malito']").css("backgroundColor", "yellow");
-                $("img[id!=cat01]").css("border", "2px solid blue");
-                // $("#a").nth-child(odd).css("border", "2px solid red");
+                
+                $("input[type=button]").on("click", function(){
+                    $("img[id!=cat01]").css("border", "2px solid blue");
+                    $("img:odd").css("border", "2px solid red");
+                })
                 
             })
         </script>
