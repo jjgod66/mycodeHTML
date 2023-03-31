@@ -9,35 +9,33 @@
         <script src="js/jquery-3.6.4.js"></script>
         <script>
             $(document).ready(function(){
-               console.log($("#checkTest").attr("id"));
-               console.log($("#checkTest").prop("id"));
-               console.log($("#selTest option:selected").attr("selected"));
-               console.log($("#selTest option:selected").prop("selected"));
+            //    console.log($("#checkTest").attr("id"));
+            //    console.log($("#checkTest").prop("id"));
+            //    console.log($("#selTest option:selected").attr("selected"));
+            //    console.log($("#selTest option:selected").prop("selected"));
                
-               $("select").on("change", function(){
-                   console.log($("#selTest option:selected").val());
-                   console.log($("#selTest option:selected").text());
-               });
+            //    $("select").on("change", function(){
+            //        console.log($("#selTest option:selected").val());
+            //        console.log($("#selTest option:selected").text());
+            //    });
 
-               console.log($("#txtTest").attr("readonly"));
-               console.log($("#txtTest").prop("readonly"));
+            //    console.log($("#txtTest").attr("readonly"));
+            //    console.log($("#txtTest").prop("readonly"));
 
-               console.log($("#runBtn").attr("disabled"));
-               console.log($("#runBtn").prop("disabled"));
-
+            //    console.log($("#runBtn").attr("disabled"));
+            //    console.log($("#runBtn").prop("disabled"));
                
-               for (let i=0; i<=$(".sel").length; i++) {
-                    $(".sel").on("click", function(){
-                        if ($(".sel")[i].prop("checked")) {
-                            $("#all").prop("checked", true);
-                            console.log("aa");
-                        } else {
-                            $("#all").prop("checked", false);
-                        }
-                    })
-                }
-                
+               let selArr = $(".sel");
 
+               $(".sel").on("click", function(){
+                    let checkedArr = $(".sel:checked");
+                    console.log(checkedArr.length);
+                    if ( selArr.length == checkedArr.length ) {
+                        $("#all").prop("checked", true);
+                    } else {
+                        $("#all").prop("checked", false);
+                    }
+               })
 
                $("#all").on("click", function(){
                     if ($("#all").prop("checked")) {
@@ -46,8 +44,6 @@
                             $(".sel").prop("checked", false);
                     }
                })
-               console.log($(".sel")[2]);
-
             })
         </script>
     </head>
@@ -72,7 +68,7 @@
             <label for="two">2222</label> 
             <input type="checkbox" name="test" value="three" id="three" class="sel">
             <label for="three">3333</label> 
-            <input type="checkbox" name="test" value="four" id="four" class="sel">
+            <input type="checkbox" name="test" value="four" id="four" class="sel" checked>
             <label for="four">4444</label>  
             <input type="checkbox" name="test" value="five" id="five" class="sel">
             <label for="five">5555</label> 
