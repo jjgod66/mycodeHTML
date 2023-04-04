@@ -6,23 +6,22 @@
         <style>
             
         </style>
-        <script src="20230327/js/jquery-3.6.4.js"></script>
+        <script src="js/jquery-3.6.4.js"></script>
         <script>
             $(document).ready(function() {
-                $(".c").each(function(i,e,c){
-                    $(this).on("click", function() {
-                        console.log(c);
-                    })
+                $("button").on("click", function(){
+                    console.log(event.pageX);
+                })
+                $(window).on("resize", function(){
+                    console.log("bbb");        
                 })
             })
+            
         </script>
     </head>
     <body>
-        <div id="div1" class="a b c">div1</div>
-        <div id="div2" class="b c d">div2</div>
-        <div id="div3" class="c d a">div3</div>
-        <div id="div4">div4</div>
-        <input type="text"/>
+        <button>demo</button>
+        <input type="text">
 
 
 
